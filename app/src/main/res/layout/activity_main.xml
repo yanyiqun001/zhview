@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.zhview.MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rv_bottom" />
+
+    <RelativeLayout
+        android:id="@+id/rv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp">
+
+        <com.zhview.Zhview
+            android:id="@+id/zhview"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/zhview"
+            android:text="知乎日报"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/zhview"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/zhview"
+            android:text="每天三次，每次七分钟"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>
